@@ -5,7 +5,12 @@ Parsing JSON is a hassle in golang. This package will allow you to parse and sea
 go get github.com/swaraj1802/GoJSON/gojson
 
 ## Usage
+
+Import
+```
 import "github.com/swaraj1802/GoJSON/gojson"
+```
+
 ```
 jsonParsed, err := gojson.ParseJSON([]byte(`{
    "glossary":{
