@@ -6,7 +6,7 @@ go get github.com/swaraj1802/GoJSON/gojson
 
 ## Usage
 import "github.com/swaraj1802/GoJSON/gojson"
-
+```
 jsonParsed, err := gojson.ParseJSON([]byte(`{
    "glossary":{
       "title":"example glossary",
@@ -41,4 +41,4 @@ if ok != nil {
 }
 output := value.JSONData()
 fmt.Println(output)
-
+```
