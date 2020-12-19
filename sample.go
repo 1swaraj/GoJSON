@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"./gojson"
+	"github.com/swaraj1802/GoJSON/gojson"
 )
 
 func main() {
