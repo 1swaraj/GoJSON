@@ -11,6 +11,7 @@ Import
 import "github.com/swaraj1802/GoJSON/gojson"
 ```
 
+Sample Code
 ```
 jsonParsed, err := gojson.ParseJSON([]byte(`{
    "glossary":{
