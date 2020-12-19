@@ -39,7 +39,7 @@ jsonParsed, err := gojson.ParseJSON([]byte(`{
    }
 }`))
 if err != nil {
-		panic(err)
+   panic(err)
 }
 value, ok := jsonParsed.Search("glossary", "GlossDiv", "title")
 if ok != nil {
