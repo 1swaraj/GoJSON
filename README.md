@@ -7,12 +7,12 @@ go get github.com/swaraj1802/GoJSON/gojson
 ## Usage
 
 Import
-```
+```go
 import "github.com/swaraj1802/GoJSON/gojson"
 ```
 
 Sample Code
-```
+```go
 jsonParsed, err := gojson.ParseJSON([]byte(`{
    "glossary":{
       "title":"example glossary",
