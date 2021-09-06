@@ -8,9 +8,11 @@ on:
 jobs:
   notification:
     runs-on: ubuntu-latest
-    strategy:
-      matrix: ${{github.event.commits}}
     steps:
-      - name: Echo Event
+      - name: Conventional Changelog Action
+        uses: TriPSs/conventional-changelog-action@v3
+        with:
+          github-token: ${{ secrets.github_token }}
+      - name: Echo Changelog
         run: |
-          echo ${{ matrix.commits }}
+          echo "${{ steps.changelog.outputs.clean_changelog }}"
