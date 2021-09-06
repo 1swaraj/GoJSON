@@ -1,0 +1,14 @@
+name: Setting up Github Actions
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  notification:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo Event
+        run: |
+          echo "${{toJSON(github.event)}}"
