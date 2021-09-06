@@ -9,7 +9,7 @@ jobs:
   notification:
     runs-on: ubuntu-latest
     strategy:
-      matrix: ${{fromJson(github.event)}}
+      matrix: ${{fromJson(toJson(github.event.commits))}}
     steps:
       - name: Echo Event
         run: |
