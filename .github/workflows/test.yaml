@@ -12,8 +12,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - uses: BobAnkh/auto-generate-changelog@master
+      - uses: 1swaraj/auto-generate-changelog@master
         with:
           REPO_NAME: "1swaraj/GoJSON"
-          ACCESS_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          PATH: "CHANGELOG.md"
+          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
