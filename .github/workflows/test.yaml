@@ -10,9 +10,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - uses: 1swaraj/auto-generate-changelog@master
-        with:
-          REPO_NAME: "1swaraj/GoJSON"
-          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git log
