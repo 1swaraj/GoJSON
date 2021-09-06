@@ -10,5 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echo Event
+        strategy:
+          matrix: ${{fromJson(github.event)}}
         run: |
-          for commit in ${{github.event.commits}}; do echo commit.message; done
+          echo ${{ matrix.commits }}
