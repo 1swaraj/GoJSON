@@ -16,4 +16,4 @@ jobs:
         with:
           REPO_NAME: "1swaraj/GoJSON"
           ACCESS_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          PATH: "/CHANGELOG.md"
+          PATH: "CHANGELOG.md"
