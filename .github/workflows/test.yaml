@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: Echo Event
         run: |
-          echo "${{toJSON(github.event)}}.commits"
+          echo "${{toJSON(github.event).commits}}"
