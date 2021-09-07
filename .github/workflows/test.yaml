@@ -13,4 +13,4 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - run: echo "**Changes arrived** *${{ github.event.head_commit.message }}*"
+      - run: echo "**Changes arrived :- ** *${{ github.event.head_commit.message }}*"
