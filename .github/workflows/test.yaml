@@ -8,6 +8,13 @@ jobs:
   generate-changelog:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/github-script@0.3.0
+        with:
+          github-token: ${{github.token}}
+          script: |
+            const core = require('@actions/core')
+            const prNumber = context.payload.number;
+            core.exportVariable('PULL_NUMBER', prNumber);
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
@@ -15,4 +22,4 @@ jobs:
         with:
           REPO_NAME: "1swaraj/GoJSON"
           ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PULLNUMBER: $(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
+          PULLNUMBER: $PULL_NUMBER
