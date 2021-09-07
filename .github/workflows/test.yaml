@@ -19,3 +19,4 @@ jobs:
           REPO_NAME: "1swaraj/GoJSON"
           ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: $PR_NUMBER
+          TITLE: $TITLE
