@@ -25,10 +25,9 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           DISCORD_USERNAME: Community Updates Ropsten
           DISCORD_AVATAR: https://pbs.twimg.com/profile_images/1315664565917581312/9da1QkqP.png
-          MESSAGE: ${{ env.DISCORD_MESSAGE }}
         uses: Ilshidur/action-discord@master
         with:
-          args: $MESSAGE
+          args: ${{ env.DISCORD_MESSAGE }}
       - name: Telegram Notification
         uses: appleboy/telegram-action@master
         with:
