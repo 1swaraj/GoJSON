@@ -15,23 +15,11 @@ jobs:
         env:
           PR_NUMBER: ${{ github.event.number }}
           TITLE: ${{ github.event.pull_request.title }}
-        with:
-          REPO_NAME: "1swaraj/GoJSON"
-          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PR_NUMBER: $PR_NUMBER
-          TITLE: $TITLE
-      - name: Discord notification
-        env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           DISCORD_USERNAME: Community Updates Ropsten
           DISCORD_AVATAR: https://pbs.twimg.com/profile_images/1315664565917581312/9da1QkqP.png
-        uses: Ilshidur/action-discord@master
         with:
-          args: ${{ env.DISCORD_MESSAGE }}
-      - name: Telegram Notification
-        uses: appleboy/telegram-action@master
-        with:
+          REPO_NAME: ${{ github.repository }}
+          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          format: markdown
-          message: "*Changes arrived* : ${{ github.event.head_commit.message }}"
