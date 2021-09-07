@@ -11,9 +11,13 @@ jobs:
     if: ${{ github.event.pull_request.merged }}
     runs-on: ubuntu-latest
     steps:
-      - env:
-          GITHUB_EVENT: ${{ toJson(github.event) }}
-        run: echo "$GITHUB_EVENT"
-      - env:
-          MESSAGE: ${{ github.event.pull_request.title }}
-        run: echo "$MESSAGE"
+      - uses: 1swaraj/auto-generate-changelog@master
+        env:
+          PR_NUMBER: ${{ github.event.number }}
+          TITLE: ${{ github.event.pull_request.title }}
+        with:
+          REPO_NAME: "1swaraj/GoJSON"
+          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: $PR_NUMBER
+          TITLE: $TITLE
+      - run: echo $MESSAGE
