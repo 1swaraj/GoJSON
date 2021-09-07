@@ -27,11 +27,11 @@ jobs:
           DISCORD_AVATAR: https://pbs.twimg.com/profile_images/1315664565917581312/9da1QkqP.png
         uses: Ilshidur/action-discord@master
         with:
-          args: $DISCORD_MESSAGE
+          args: ${{ DISCORD_MESSAGE }}
       - name: Telegram Notification
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           format: markdown
-          message: $TELEGRAM_MESSAGE
+          message: "*Changes arrived* : ${{ github.event.head_commit.message }}"
