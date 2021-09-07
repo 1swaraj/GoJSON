@@ -17,3 +17,6 @@ jobs:
       - env:
           MESSAGE: ${{ github.event.pull_request.title }}
         run: echo "$MESSAGE"
+      - env:
+          GITHUB_EVENT: ${{ github.event }}
+        run: echo "$GITHUB_EVENT"
