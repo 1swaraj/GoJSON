@@ -42,5 +42,7 @@ func main() {
 		panic(errors.New("Element doesn't exist"))
 	}
 	output := value.JSONData()
+	// See the output
+	fmt.Println("Output")
 	fmt.Println(output)
 }
