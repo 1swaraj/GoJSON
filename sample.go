@@ -43,5 +43,6 @@ func main() {
 	}
 	output := value.JSONData()
 	// See the output
+	fmt.Println("Output")
 	fmt.Println(output)
 }
