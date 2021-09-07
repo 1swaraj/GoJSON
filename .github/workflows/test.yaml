@@ -34,4 +34,4 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           format: markdown
-          message: "*Changes arrived* : ${{ github.event.head_commit.message }}"
+          message: ${{ TELEGRAM_MESSAGE }}
