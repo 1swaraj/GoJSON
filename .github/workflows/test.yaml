@@ -15,5 +15,5 @@ jobs:
         with:
           fetch-depth: 0
       - env:
-          GITHUB_CONTEXT: ${{ toJSON(github) }}
-        run: echo "$GITHUB_CONTEXT"
+          MESSAGE: ${{ toJSON(github.event.title) }}
+        run: echo "$MESSAGE"
