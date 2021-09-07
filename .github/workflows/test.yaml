@@ -15,5 +15,5 @@ jobs:
         with:
           fetch-depth: 0
       - env:
-          GITHUB_CONTEXT: ${{ toJSON(github) }}
-        run: echo "$GITHUB_CONTEXT"
+          MESSAGE: ${{ github.event.pull_request.title }}
+        run: echo "$MESSAGE"
