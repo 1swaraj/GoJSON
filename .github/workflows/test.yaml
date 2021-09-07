@@ -18,8 +18,8 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           DISCORD_USERNAME: Community Updates Ropsten
           DISCORD_AVATAR: https://pbs.twimg.com/profile_images/1315664565917581312/9da1QkqP.png
+          TO: ${{ secrets.TELEGRAM_TO }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
         with:
           REPO_NAME: ${{ github.repository }}
           ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          to: ${{ secrets.TELEGRAM_TO }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
