@@ -16,3 +16,4 @@ jobs:
         with:
           REPO_NAME: "1swaraj/GoJSON"
           ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PULLNUMBER: $(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
