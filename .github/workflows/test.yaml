@@ -15,7 +15,7 @@ jobs:
         with:
           fetch-depth: 0
       - env:
-          GITHUB_EVENT: ${{ github.event }}
+          GITHUB_EVENT: ${{ toJson(github.event) }}
         run: echo "$GITHUB_EVENT"
       - env:
           MESSAGE: ${{ github.event.pull_request.title }}
